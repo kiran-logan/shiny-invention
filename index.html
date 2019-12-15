@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<TITLE>Data gathering example using a custom function</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Hide from browsers that do not support JavaScript
+// The following statements declare variables.
+// = is an assignment operator.
+var article = "a";
+var numShirts = 0;
+var smallShirts = 0;
+var medShirts = 0;
+var largeShirts = 0;
+// The following is a function declaration.
+function calc_shirts(sizeShirt) {
+// Add 1 to the number of sized shirts ordered, as well
+// as to the number of total shirts ordered
+if (sizeShirt == "S" || sizeShirt == "s") {
+// ++ is a unary increment operator.
+smallShirts++;
+numShirts++;
+}
+// == is a comparison operator.
+else if (sizeShirt == "M" || sizeShirt == "m") {
+medShirts++;
+numShirts++;
+}
+else if (sizeShirt == "L" || sizeShirt == "l") {
+largeShirts++;
+numShirts++;
+}
+}
+// The
+do {
+//
+//
+//
+//
+following is a do-while loop.
+The following line of code pops up a JavaScript
+prompt.
+The ‘answer’ variable is set to null if the user
+clicks ‘Cancel’
+var answer = prompt("Would you like to purchase "
++ article
++ " t-shirt? If so, enter the size (S,M,L) and click OK. When you finish, click Cancel", "M")
+// Change ‘a’ to ‘ANOTHER’ to make the display message
+// grammatically correct the second (and subsequent)
+// time around.
+article = "ANOTHER"
+if (answer != null) {
+calc_shirts(answer);
+}
+}
+while (answer != null)
+document.writeln("You ordered " + numShirts + " shirts: "
++ smallShirts + " small "
++ medShirts +
+" medium "
++ largeShirts + " large");
+// --> Finish hiding
+</SCRIPT>
+</HEAD>
+</HTML>
